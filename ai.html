@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICEY AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#05050a;
+color:white;
+height:100vh;
+overflow:hidden;
+}
+
+.bg{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(138,43,226,.25), transparent 25%),
+radial-gradient(circle at 80% 30%, rgba(0,191,255,.15), transparent 25%),
+radial-gradient(circle at 50% 80%, rgba(255,0,255,.15), transparent 35%);
+z-index:-2;
+}
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:280px;
+height:100%;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border-right:1px solid rgba(255,255,255,.1);
+padding:20px;
+overflow-y:auto;
+}
+
+.logo{
+font-size:2rem;
+font-weight:800;
+color:#9b5cff;
+margin-bottom:20px;
+text-align:center;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.menu button{
+background:rgba(255,255,255,.05);
+border:none;
+padding:15px;
+border-radius:12px;
+color:white;
+cursor:pointer;
+transition:.3s;
+text-align:left;
+}
+
+.menu button:hover{
+background:#9b5cff;
+}
+
+.main{
+margin-left:280px;
+height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+.header{
+padding:20px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+background:rgba(255,255,255,.03);
+}
+
+.header h1{
+font-size:2.5rem;
+color:#9b5cff;
+}
+
+.chat{
+flex:1;
+padding:20px;
+overflow-y:auto;
+}
+
+.bot{
+background:rgba(155,92,255,.15);
+padding:15px;
+border-radius:15px;
+max-width:800px;
+margin-bottom:15px;
+}
+
+.user{
+background:rgba(255,255,255,.08);
+padding:15px;
+border-radius:15px;
+max-width:800px;
+margin-left:auto;
+margin-bottom:15px;
+}
+
+.input-box{
+display:flex;
+padding:15px;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+.input-box input{
+flex:1;
+padding:15px;
+border:none;
+outline:none;
+background:rgba(255,255,255,.08);
+color:white;
+border-radius:12px;
+}
+
+.input-box button{
+margin-left:10px;
+padding:15px 25px;
+border:none;
+border-radius:12px;
+background:#9b5cff;
+color:white;
+cursor:pointer;
+font-weight:600;
+}
+
+@media(max-width:768px){
+
+.sidebar{
+display:none;
+}
+
+.main{
+margin-left:0;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="sidebar">
+
+<div class="logo">🤖 ICEY AI</div>
+
+<div class="menu">
+<button onclick="fill('minecraft')">🎮 Minecraft Hosting</button>
+<button onclick="fill('vps')">💻 VPS Hosting</button>
+<button onclick="fill('web hosting')">🌐 Web Hosting</button>
+<button onclick="fill('buy hosting')">💰 Buy Hosting</button>
+<button onclick="fill('ticket')">🎫 Support Ticket</button>
+<button onclick="fill('discord')">💬 Discord Support</button>
+<button onclick="fill('features')">⚡ Features</button>
+<button onclick="fill('about')">👑 About Us</button>
+<button onclick="fill('contact')">📞 Contact</button>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+<h1>ICEY AI</h1>
+<p>Your Hosting Assistant</p>
+</div>
+
+<div class="chat" id="chat">
+
+<div class="bot">
+👋 Welcome to ICEY AI!
+
+Ask me about:
+
+🎮 Minecraft Hosting  
+💻 VPS Hosting  
+🌐 Web Hosting  
+💰 Buy Hosting  
+🎫 Support Tickets  
+💬 Discord Support  
+⚡ Features  
+👑 About Us  
+📞 Contact  
+
+Discord:
+https://discord.gg/QMwRhCMGrZ
+</div>
+
+</div>
+
+<div class="input-box">
+<input type="text" id="msg" placeholder="Ask ICEY AI...">
+<button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+
+<script>
+
+function fill(text){
+document.getElementById("msg").value=text;
+}
+
+function getReply(msg){
+
+msg=msg.toLowerCase();
+
+if(msg.includes("minecraft"))
+return "🎮 ICEYHOST Minecraft Hosting includes SSD Storage, DDoS Protection and High Performance servers.";
+
+if(msg.includes("vps"))
+return "💻 VPS Hosting is Coming Soon. Stay tuned on Discord.";
+
+if(msg.includes("web"))
+return "🌐 Web Hosting is currently under development.";
+
+if(msg.includes("buy"))
+return "💰 To purchase hosting, join Discord and create a Purchase Ticket.";
+
+if(msg.includes("ticket"))
+return "🎫 Create a Support Ticket on our Discord server.";
+
+if(msg.includes("discord"))
+return "💬 Discord: https://discord.gg/QMwRhCMGrZ";
+
+if(msg.includes("features"))
+return "⚡ Features: SSD Storage, DDoS Protection, Instant Setup, 24/7 Support.";
+
+if(msg.includes("about"))
+return "👑 CEO: BLANKONTOPP (NISHANT) | Owner: MrVanillaMC (JIHAD)";
+
+if(msg.includes("contact"))
+return "📞 Contact: speak on discord ";
+
+return "🤖 Ask me about Minecraft Hosting, VPS, Web Hosting, Tickets, Discord, Features, About or Contact.";
+}
+
+function sendMessage(){
+
+let input=document.getElementById("msg");
+let text=input.value.trim();
+
+if(text==="") return;
+
+let chat=document.getElementById("chat");
+
+chat.innerHTML += `<div class="user">${text}</div>`;
+
+setTimeout(()=>{
+chat.innerHTML += `<div class="bot">${getReply(text)}</div>`;
+chat.scrollTop=chat.scrollHeight;
+},500);
+
+input.value="";
+
+}
+
+</script>
+
+</body>
+</html>

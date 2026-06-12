@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICEYHOST | Premium Hosting</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#05050a;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background */
+.bg{
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+radial-gradient(circle at 20% 20%, rgba(138,43,226,.25), transparent 25%),
+radial-gradient(circle at 80% 30%, rgba(0,191,255,.15), transparent 25%),
+radial-gradient(circle at 50% 80%, rgba(255,0,255,.15), transparent 35%);
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.1);
+z-index:999;
+}
+
+.logo{
+font-size:2rem;
+font-weight:800;
+color:#9b5cff;
+}
+
+.menu-btn{
+font-size:30px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+font-weight:800;
+}
+
+.hero span{
+color:#9b5cff;
+text-shadow:0 0 20px #9b5cff;
+}
+
+.hero p{
+margin-top:15px;
+opacity:.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 40px;
+border-radius:50px;
+text-decoration:none;
+background:linear-gradient(45deg,#7c3aed,#9333ea);
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* SECTIONS */
+.section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:2.6rem;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(155,92,255,.4);
+}
+
+.card h3{
+color:#9b5cff;
+margin-bottom:10px;
+}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.stat{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat h2{
+font-size:2.5rem;
+color:#9b5cff;
+}
+
+/* TRAY */
+.tray{
+position:fixed;
+right:-340px;
+top:0;
+width:320px;
+height:100%;
+background:#0d0d15;
+border-left:1px solid rgba(255,255,255,.1);
+transition:.4s;
+z-index:1000;
+overflow-y:auto;
+}
+
+.tray-header{
+padding:25px;
+display:flex;
+justify-content:space-between;
+color:#9b5cff;
+font-size:20px;
+}
+
+.tray a{
+display:block;
+padding:16px 25px;
+color:white;
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.tray a:hover{
+background:#9b5cff;
+}
+
+/* FLOATING AI BUTTON */
+.ai-float{
+position:fixed;
+right:25px;
+bottom:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+text-decoration:none;
+background:linear-gradient(45deg,#7c3aed,#9333ea);
+box-shadow:0 0 40px rgba(147,51,234,.8);
+z-index:9999;
+animation:float 2s infinite ease-in-out;
+}
+
+.ai-float:hover{
+transform:scale(1.1);
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+/* FOOTER */
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.1);
+background:rgba(255,255,255,.03);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<nav>
+<div class="logo">ICEYHOST</div>
+<div class="menu-btn" onclick="openTray()">☰</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>🚀 Premium <span>Hosting</span><br>For Everyone</h1>
+<p>Minecraft • VPS • Web Hosting • 24/7 Support</p>
+
+<a href="#" class="btn" onclick="openTray()">Get Started</a>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+<h2 class="title">⚡ Why ICEYHOST?</h2>
+
+<div class="cards">
+<div class="card"><h3>🚀 Performance</h3><p>Fast NVMe SSD servers.</p></div>
+<div class="card"><h3>🛡 Security</h3><p>DDoS protected systems.</p></div>
+<div class="card"><h3>⚙ Setup</h3><p>Instant deployment.</p></div>
+<div class="card"><h3>💬 Support</h3><p>24/7 Discord help.</p></div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="section">
+<h2 class="title">📊 Network Stats</h2>
+
+<div class="stats">
+<div class="stat"><h2>99.99%</h2><p>Uptime</p></div>
+<div class="stat"><h2>24/7</h2><p>Support</p></div>
+<div class="stat"><h2>500+</h2><p>Servers</p></div>
+<div class="stat"><h2>10K+</h2><p>Users</p></div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<h2>ICEYHOST 🚀</h2>
+<p>Premium Hosting Solutions</p>
+<p>© 2026 ICEYHOST</p>
+</footer>
+
+<!-- TRAY -->
+<div id="tray" class="tray">
+<div class="tray-header">
+<span>MENU</span>
+<span onclick="closeTray()">✖</span>
+</div>
+
+<a href="minecraft.html">🎮 Minecraft Hosting</a>
+<a href="vps.html">💻 VPS Hosting</a>
+<a href="webhosting.html">🌐 Web Hosting</a>
+<a href="serverstatus.html">📊 Server Status</a>
+<a href="support.html">🎫 Support</a>
+<a href="discordsupport.html">💬 Discord</a>
+<a href="knowledge.html">📖 Knowledge Base</a>
+<a href="features.html">⚡ Features</a>
+<a href="about.html">👑 About</a>
+<a href="contact.html">📞 Contact</a>
+</div>
+
+<!-- FLOATING AI -->
+<a href="ai.html" class="ai-float">🤖</a>
+
+<script>
+function openTray(){
+document.getElementById("tray").style.right="0";
+}
+
+function closeTray(){
+document.getElementById("tray").style.right="-340px";
+}
+</script>
+
+</body>
+</html>

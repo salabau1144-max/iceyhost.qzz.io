@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tickets | ICEYHOST</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#05050a;
+color:white;
+overflow:hidden;
+}
+
+/* background glow */
+.bg{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(155,92,255,.25), transparent 40%),
+radial-gradient(circle at 80% 80%, rgba(59,130,246,.15), transparent 40%);
+z-index:-2;
+}
+
+/* floating orb */
+.orb{
+position:absolute;
+width:500px;
+height:500px;
+background:#9b5cff;
+filter:blur(160px);
+opacity:.15;
+border-radius:50%;
+animation:float 8s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(70px);}
+}
+
+/* card */
+.box{
+width:450px;
+padding:50px;
+text-align:center;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+animation:pop .8s ease;
+}
+
+@keyframes pop{
+from{transform:scale(.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h1{
+font-size:2.5rem;
+color:#9b5cff;
+text-shadow:0 0 25px #9b5cff;
+}
+
+p{
+opacity:.8;
+margin-top:10px;
+}
+
+/* buttons */
+a{
+display:block;
+margin-top:15px;
+padding:12px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.discord{
+background:linear-gradient(45deg,#5865F2,#4752C4);
+color:white;
+}
+
+.discord:hover{
+transform:scale(1.05);
+}
+
+.ticket{
+background:linear-gradient(45deg,#7c3aed,#9333ea);
+color:white;
+}
+
+.ticket:hover{
+transform:scale(1.05);
+}
+
+/* small text */
+.small{
+margin-top:20px;
+font-size:12px;
+opacity:.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="orb"></div>
+
+<div class="box">
+
+<h1>🎫 Support Tickets</h1>
+<p>Go to Discord and create ticket for support, purchase or queries 🚀</p>
+
+<a class="discord" href="https://discord.gg/QMwRhCMGrZ" target="_blank">
+💬 Go to Discord
+</a>
+
+<a class="ticket" href="https://discord.gg/QMwRhCMGrZ" target="_blank">
+🎟 Make Ticket (Purchase / Support / Query)
+</a>
+
+<div class="small">
+ICEYHOST Ticket System runs on Discord Bot ⚡
+</div>
+
+</div>
+
+</body>
+</html>

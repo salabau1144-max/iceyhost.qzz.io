@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | ICEYHOST</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#05050a;
+color:white;
+overflow:hidden;
+}
+
+/* background glow */
+.bg{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(155,92,255,.25), transparent 40%),
+radial-gradient(circle at 80% 80%, rgba(59,130,246,.15), transparent 40%);
+z-index:-1;
+}
+
+/* floating animation */
+.orb{
+position:absolute;
+width:400px;
+height:400px;
+background:#9b5cff;
+filter:blur(150px);
+opacity:.15;
+border-radius:50%;
+animation:float 8s infinite ease-in-out;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(60px);}
+}
+
+/* box */
+.box{
+text-align:center;
+padding:60px 80px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+backdrop-filter:blur(20px);
+animation:pop .8s ease;
+}
+
+@keyframes pop{
+from{transform:scale(.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+/* big text */
+.role{
+font-size:3rem;
+font-weight:800;
+color:#9b5cff;
+text-shadow:0 0 25px #9b5cff;
+margin-top:20px;
+}
+
+.name{
+font-size:1.8rem;
+font-weight:600;
+margin-bottom:20px;
+opacity:.9;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="orb"></div>
+
+<div class="box">
+
+<div class="role">CEO</div>
+<div class="name">BLANKONTOPP</div>
+<div class="name">NISHANT</div>
+
+<br>
+
+<div class="role">OWNER</div>
+<div class="name">MrVanillaMC</div>
+<div class="name">JIHAD</div>
+
+</div>
+
+</body>
+</html>

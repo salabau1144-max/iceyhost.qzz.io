@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPS Hosting | ICEYHOST</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#05050a;
+color:white;
+overflow:hidden;
+}
+
+/* 🌌 Background */
+
+.bg{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%, rgba(139,92,246,.3), transparent 30%),
+radial-gradient(circle at 80% 80%, rgba(59,130,246,.2), transparent 30%),
+radial-gradient(circle at 50% 50%, rgba(236,72,153,.2), transparent 40%);
+z-index:-2;
+}
+
+/* ✨ Floating Orbs */
+
+.orb{
+position:absolute;
+width:400px;
+height:400px;
+border-radius:50%;
+filter:blur(120px);
+opacity:.25;
+animation:float 10s ease-in-out infinite;
+}
+
+.orb1{
+background:#8b5cf6;
+top:-100px;
+left:-100px;
+}
+
+.orb2{
+background:#3b82f6;
+bottom:-120px;
+right:-120px;
+animation-delay:3s;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(60px);}
+}
+
+/* 🧊 Box */
+
+.box{
+text-align:center;
+padding:50px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:20px;
+animation:pop .8s ease;
+}
+
+@keyframes pop{
+from{transform:scale(.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+h1{
+font-size:3rem;
+color:#9b5cff;
+text-shadow:0 0 25px #9b5cff;
+}
+
+p{
+margin-top:10px;
+opacity:.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:linear-gradient(45deg,#7c3aed,#9333ea);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.discord{
+display:block;
+margin-top:15px;
+color:#9b5cff;
+text-decoration:none;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="box">
+
+<h1>💻 VPS Hosting</h1>
+<p>Coming Soon...</p>
+<p>We are building something powerful 🚀</p>
+
+<a class="btn" href="index.html">⬅ Back Home</a>
+
+<a class="discord" href="https://discord.gg/QMwRhCMGrZ" target="_blank">
+💬 Join Discord for Updates
+</a>
+
+</div>
+
+</body>
+</html>
